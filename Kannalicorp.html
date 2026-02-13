@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso Kannali corp</title>
+</head>
+<body>
+    <h2>♾️Portaria Kannali Corporation♾️</h2>
+    <p>Digite seu Nome</p>
+    <input type="text" id="user">
+    <p>Digite o Horário</p>
+    <input type="number" id="hora">
+    <button onclick="acesso()">Verificar Acesso</button>
+    <p id="time"></p>
+    <p id="caio"></p>
+
+    <script>
+        function acesso() {
+            let usuario = document.getElementById('user').value;
+            let horar = document.getElementById('hora').value;
+            let horario = Number(horar)
+            let usuarioo = ["Enzo Avanze", "Enzo Kadooka", "Pedro", "Caio", "Vitor", "Nicolas", "Bertaco"]
+
+            if (horario > 23 || horario < 0) {
+                alert("Horário inválido")
+            }else if (horario >= 22 || horario < 4) {
+                alert("Horário fora de turno, volte amanhã!")
+            }else {
+                time.innerHTML = "Horario Permitido"
+            }
+
+            if (usuarioo.includes(usuario)) {
+                caio.innerHTML = `Usuario reconhecido, Bem vindo ${usuario}!`
+            }else if (usuario === "Paulão") {
+                alert("Parabéns, você é o torcedor número 1 do Novorizontino!")
+            }else {
+                alert("Usuário não cadastrado")
+            }
+        }
+    </script>
+</body>
+</html>
